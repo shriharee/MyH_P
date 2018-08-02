@@ -18,4 +18,10 @@
   <build>
     <finalName>MyH_P</finalName>
   </build>
+  <distributionManagement>
+        <repository>
+            <id>MyH_P.write</id>
+            <url>https://192.168.56.105:8080/</url>
+        </repository>
+    </distributionManagement>
 </project>
