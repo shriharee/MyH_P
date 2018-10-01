@@ -24,6 +24,7 @@ stage('Deploy'){
 steps{
 withMaven(maven : 'maven'){
 sh 'mvn deploy'
+sh 'cp /var/lib/jenkins/workspace/test-pipeline/target/MyH_P.war /opt/tomcat/webapps/'  
 }
 }
 }
