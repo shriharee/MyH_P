@@ -1,31 +1,36 @@
 pipeline {
-agent any
 
-stages {
-stage ('Compile Stage'){
+agent any {
+
+stage ('compile repo'){
 steps{
-echo 'Building'
-withMaven(maven : 'maven_3.5.3'){
+
+withMaven(maven : 'maven'){
 sh 'mvn clean compile'
-      }
-   }
 }
-stage ('Test Stage'){
+}
+
+}
+
+stage('Test'){
 steps{
-withMaven(maven : 'maven_3.5.3'){
+withMaven(maven : 'maven'){
 sh 'mvn test'
-    }
- }
 }
-stage ('Deplyotment Stage'){
+}
+}
+
+stage('Deploy'){
 steps{
-
-withMaven(maven : 'maven_3.5.3'){
+withMaven(maven : 'maven'){
 sh 'mvn deploy'
-    }
- }
+}
+}
 }
 
 
 }
+
 }
+
+
