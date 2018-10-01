@@ -21,7 +21,7 @@
   <distributionManagement>
         <repository>
             <id>MyH_P.write</id>
-            <url>https://192.168.56.20:8088/</url>
+            <url>http://192.168.56.20:8088/</url>
         </repository>
     </distributionManagement>
 </project>
